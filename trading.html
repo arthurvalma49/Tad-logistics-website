@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading — TAD Logistics</title>
+  <meta name="description" content="Browse TAD Logistics' 17 product categories for soft furniture manufacturing. Fabrics, foam, hardware, mechanisms and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .trading-filter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .filter-btn {
+      font-family: var(--ff-head);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4em 1em;
+      border-radius: 6px;
+      border: 1.5px solid var(--border);
+      color: var(--ink-3);
+      background: var(--white);
+      transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+    }
+
+    .filter-btn.is-active,
+    .filter-btn:hover {
+      background: var(--sage-whisper);
+      border-color: var(--border-sage);
+      color: var(--sage-dark);
+    }
+
+    .cat-card[data-hidden="true"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────── -->
+  <header class="site-nav" role="banner">
+    <div class="site-nav__inner">
+      <a href="index.html" class="site-nav__logo" aria-label="TAD Logistics home">
+        <span class="site-nav__logo-wordmark">TAD Logistics</span>
+        <span class="site-nav__logo-sub">Trading · Assembling · Distribution</span>
+      </a>
+
+      <nav class="site-nav__links" role="navigation" aria-label="Main navigation">
+        <div class="site-nav__item" style="position: relative;">
+          <a href="trading.html" class="site-nav__link site-nav__link--has-dropdown is-active" aria-haspopup="true">
+            Trading
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="mega-menu" role="region" aria-label="Product categories">
+            <div class="mega-menu__inner">
+              <div class="mega-menu__intro">
+                <span class="label">What we stock</span>
+                <p>17 product categories covering everything needed for soft furniture manufacturing.</p>
+                <a href="trading.html" class="btn btn--outline" style="margin-top: 1.5rem;">View all categories <span class="btn__arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="mega-menu__categories">
+                <a href="#upholstery-fabrics" class="mega-menu__cat"><div class="mega-menu__cat-num">01</div><div class="mega-menu__cat-name">Upholstery Fabrics</div></a>
+                <a href="#velvet-chenille" class="mega-menu__cat"><div class="mega-menu__cat-num">02</div><div class="mega-menu__cat-name">Velvet &amp; Chenille</div></a>
+                <a href="#technical-fabrics" class="mega-menu__cat"><div class="mega-menu__cat-num">03</div><div class="mega-menu__cat-name">Technical Fabrics</div></a>
+                <a href="#foam" class="mega-menu__cat"><div class="mega-menu__cat-num">04</div><div class="mega-menu__cat-name">Polyurethane Foam</div></a>
+                <a href="#fiber-padding" class="mega-menu__cat"><div class="mega-menu__cat-num">05</div><div class="mega-menu__cat-name">Hollowfiber &amp; Padding</div></a>
+                <a href="#springs" class="mega-menu__cat"><div class="mega-menu__cat-num">06</div><div class="mega-menu__cat-name">Springs &amp; Sinuous Wire</div></a>
+                <a href="#mechanisms" class="mega-menu__cat"><div class="mega-menu__cat-num">07</div><div class="mega-menu__cat-name">Mechanisms &amp; Recliners</div></a>
+                <a href="#legs" class="mega-menu__cat"><div class="mega-menu__cat-num">08</div><div class="mega-menu__cat-name">Legs &amp; Feet</div></a>
+                <a href="#zippers" class="mega-menu__cat"><div class="mega-menu__cat-num">09</div><div class="mega-menu__cat-name">Zippers &amp; Closures</div></a>
+                <a href="#webbing" class="mega-menu__cat"><div class="mega-menu__cat-num">10</div><div class="mega-menu__cat-name">Webbing &amp; Strapping</div></a>
+                <a href="#trim" class="mega-menu__cat"><div class="mega-menu__cat-num">11</div><div class="mega-menu__cat-name">Decorative Trim &amp; Piping</div></a>
+                <a href="#buttons" class="mega-menu__cat"><div class="mega-menu__cat-num">12</div><div class="mega-menu__cat-name">Buttons &amp; Studs</div></a>
+                <a href="#thread" class="mega-menu__cat"><div class="mega-menu__cat-num">13</div><div class="mega-menu__cat-name">Thread &amp; Needles</div></a>
+                <a href="#labels" class="mega-menu__cat"><div class="mega-menu__cat-num">14</div><div class="mega-menu__cat-name">Labels &amp; Marking</div></a>
+                <a href="#packaging" class="mega-menu__cat"><div class="mega-menu__cat-num">15</div><div class="mega-menu__cat-name">Packaging &amp; Protection</div></a>
+                <a href="#adhesives" class="mega-menu__cat"><div class="mega-menu__cat-num">16</div><div class="mega-menu__cat-name">Adhesives &amp; Chemicals</div></a>
+                <a href="#hardware" class="mega-menu__cat"><div class="mega-menu__cat-num">17</div><div class="mega-menu__cat-name">Metal Hardware &amp; Fittings</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="site-nav__item">
+          <a href="production.html" class="site-nav__link">Production</a>
+        </div>
+        <div class="site-nav__item">
+          <a href="contact.html" class="site-nav__link">Contact</a>
+        </div>
+      </nav>
+
+      <a href="trading.html" class="site-nav__lang">ET</a>
+
+      <button class="site-nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─── Mobile nav drawer ──────────────────────────── -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__sub">
+      <div class="mobile-nav__sub-title">Trading</div>
+      <div class="mobile-nav__cats">
+        <a href="#upholstery-fabrics" class="mobile-nav__cat">Upholstery Fabrics</a>
+        <a href="#velvet-chenille" class="mobile-nav__cat">Velvet &amp; Chenille</a>
+        <a href="#technical-fabrics" class="mobile-nav__cat">Technical Fabrics</a>
+        <a href="#foam" class="mobile-nav__cat">Polyurethane Foam</a>
+        <a href="#fiber-padding" class="mobile-nav__cat">Hollowfiber &amp; Padding</a>
+        <a href="#springs" class="mobile-nav__cat">Springs</a>
+        <a href="#mechanisms" class="mobile-nav__cat">Mechanisms</a>
+        <a href="#legs" class="mobile-nav__cat">Legs &amp; Feet</a>
+        <a href="#zippers" class="mobile-nav__cat">Zippers</a>
+        <a href="#webbing" class="mobile-nav__cat">Webbing</a>
+        <a href="#trim" class="mobile-nav__cat">Trim &amp; Piping</a>
+        <a href="#buttons" class="mobile-nav__cat">Buttons &amp; Studs</a>
+        <a href="#thread" class="mobile-nav__cat">Thread</a>
+        <a href="#labels" class="mobile-nav__cat">Labels</a>
+        <a href="#packaging" class="mobile-nav__cat">Packaging</a>
+        <a href="#adhesives" class="mobile-nav__cat">Adhesives</a>
+        <a href="#hardware" class="mobile-nav__cat">Metal Hardware</a>
+      </div>
+    </div>
+    <a href="production.html" class="mobile-nav__link">Production</a>
+    <a href="contact.html" class="mobile-nav__link">Contact</a>
+  </nav>
+
+  <main>
+    <!-- ─── Page hero ─────────────────────────────────── -->
+    <section class="page-hero" aria-labelledby="trading-heading">
+      <div class="container">
+        <p class="label label--light">17 product categories</p>
+        <h1 id="trading-heading">Everything your production needs.</h1>
+        <p>From the first fabric swatch to the final packaging — TAD stocks the complete range of materials for soft furniture manufacturing.</p>
+      </div>
+    </section>
+
+    <!-- ─── Catalogue ─────────────────────────────────── -->
+    <section class="section" aria-labelledby="catalogue-heading">
+      <div class="container">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem;">
+          <h2 id="catalogue-heading" class="reveal" style="letter-spacing: -0.02em;">Product catalogue</h2>
+          <p class="reveal reveal--delay-1" style="color: var(--ink-2); font-size: 0.875rem; max-width: none;">To enquire about any product, <a href="contact.html" style="color: var(--sage); font-weight: 600;">contact our team</a>.</p>
+        </div>
+
+        <!-- Filter -->
+        <div class="trading-filter" role="group" aria-label="Filter categories">
+          <button class="filter-btn is-active" data-filter="all">All categories</button>
+          <button class="filter-btn" data-filter="textiles">Textiles</button>
+          <button class="filter-btn" data-filter="padding">Padding &amp; Foam</button>
+          <button class="filter-btn" data-filter="structure">Structure &amp; Hardware</button>
+          <button class="filter-btn" data-filter="finishing">Finishing</button>
+        </div>
+
+        <div class="cat-full-grid" id="catalogue-grid">
+
+          <!-- Textiles -->
+          <article class="cat-card reveal" id="upholstery-fabrics" data-group="textiles">
+            <div class="cat-card__top">
+              <span class="cat-card__num">01</span>
+            </div>
+            <h3 class="cat-card__title">Upholstery Fabrics</h3>
+            <p class="cat-card__body">
+              Wide-format rolls in pattern and solid weaves. Our range covers performance textiles, natural blends, and synthetic options for every seat application. Available in continuous lengths with consistent dye lots.
+            </p>
+            <a href="contact.html?subject=Upholstery+Fabrics" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="velvet-chenille" data-group="textiles">
+            <div class="cat-card__top">
+              <span class="cat-card__num">02</span>
+            </div>
+            <h3 class="cat-card__title">Velvet &amp; Chenille</h3>
+            <p class="cat-card__body">
+              Cut pile and loop pile specialty textiles for premium upholstery. Includes plain velvets, structured chenilles, and embossed varieties suitable for both seats and decorative cushions.
+            </p>
+            <a href="contact.html?subject=Velvet+Chenille" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="technical-fabrics" data-group="textiles">
+            <div class="cat-card__top">
+              <span class="cat-card__num">03</span>
+            </div>
+            <h3 class="cat-card__title">Technical Fabrics</h3>
+            <p class="cat-card__body">
+              Backing cloths, dust covers, non-woven materials, and lining fabrics. The functional textiles that don't show but matter to quality and durability — fire-retardant grades available.
+            </p>
+            <a href="contact.html?subject=Technical+Fabrics" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Padding & Foam -->
+          <article class="cat-card reveal" id="foam" data-group="padding">
+            <div class="cat-card__top">
+              <span class="cat-card__num">04</span>
+            </div>
+            <h3 class="cat-card__title">Polyurethane Foam</h3>
+            <p class="cat-card__body">
+              Seat, back, and cushion foam in all standard densities and grades. Sheet and profile cuts available. HR foam, memory foam, and reconstituted chipfoam for every comfort and budget requirement.
+            </p>
+            <a href="contact.html?subject=Polyurethane+Foam" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="fiber-padding" data-group="padding">
+            <div class="cat-card__top">
+              <span class="cat-card__num">05</span>
+            </div>
+            <h3 class="cat-card__title">Hollowfiber &amp; Padding</h3>
+            <p class="cat-card__body">
+              Filling fibers, batting, and pillow padding materials. Siliconized and non-siliconized hollowfiber, carded fiber batting in varying weights, and blended polyester wadding for loose cushions.
+            </p>
+            <a href="contact.html?subject=Hollowfiber+Padding" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Structure & Hardware -->
+          <article class="cat-card reveal" id="springs" data-group="structure">
+            <div class="cat-card__top">
+              <span class="cat-card__num">06</span>
+            </div>
+            <h3 class="cat-card__title">Springs &amp; Sinuous Wire</h3>
+            <p class="cat-card__body">
+              Coil springs, zigzag sinuous wire, border wire, and spring clips for traditional and modern seat construction. Consistent gauge and temper for reliable performance throughout the product lifetime.
+            </p>
+            <a href="contact.html?subject=Springs" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="mechanisms" data-group="structure">
+            <div class="cat-card__top">
+              <span class="cat-card__num">07</span>
+            </div>
+            <h3 class="cat-card__title">Mechanisms &amp; Recliners</h3>
+            <p class="cat-card__body">
+              Sofa bed pull-out mechanisms, recliner chair actions, corner unit fittings, and storage bed hardware. Tested to European load and cycle standards.
+            </p>
+            <a href="contact.html?subject=Mechanisms" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="legs" data-group="structure">
+            <div class="cat-card__top">
+              <span class="cat-card__num">08</span>
+            </div>
+            <h3 class="cat-card__title">Legs &amp; Feet</h3>
+            <p class="cat-card__body">
+              Wooden, metal, and plastic furniture legs in standard and custom heights. Turned wood, tapered, hairpin, and block styles. Protective glides and leveling feet in matching finishes.
+            </p>
+            <a href="contact.html?subject=Legs+Feet" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal" id="webbing" data-group="structure">
+            <div class="cat-card__top">
+              <span class="cat-card__num">10</span>
+            </div>
+            <h3 class="cat-card__title">Webbing &amp; Strapping</h3>
+            <p class="cat-card__body">
+              Elastic and non-elastic seat webbing, flat jute webbing, and polypropylene strapping. The foundation of every upholstered seat — stocked in standard widths and stretch percentages.
+            </p>
+            <a href="contact.html?subject=Webbing" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="hardware" data-group="structure">
+            <div class="cat-card__top">
+              <span class="cat-card__num">17</span>
+            </div>
+            <h3 class="cat-card__title">Metal Hardware &amp; Fittings</h3>
+            <p class="cat-card__body">
+              Joining plates, corner braces, cam locks, barrel nuts, and assembly hardware for flat-pack and frame construction. Staples, tacks, and upholstery nails in all standard sizes.
+            </p>
+            <a href="contact.html?subject=Hardware" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Finishing -->
+          <article class="cat-card reveal" id="zippers" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">09</span>
+            </div>
+            <h3 class="cat-card__title">Zippers &amp; Closures</h3>
+            <p class="cat-card__body">
+              Nylon and metal zippers for cushion covers, bolster covers, and slipcovers. Continuous zipper chain cut to length, or pre-cut lengths with sliders. Self-sealing and locking slider options.
+            </p>
+            <a href="contact.html?subject=Zippers" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="trim" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">11</span>
+            </div>
+            <h3 class="cat-card__title">Decorative Trim &amp; Piping</h3>
+            <p class="cat-card__body">
+              Welt cord, insertion piping, fringe, gimp, and decorative braid. Fabric-covered piping in standard colors, or piping cord for custom fabric covers. Fringe and tassel trims for traditional styles.
+            </p>
+            <a href="contact.html?subject=Trim+Piping" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="buttons" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">12</span>
+            </div>
+            <h3 class="cat-card__title">Buttons &amp; Studs</h3>
+            <p class="cat-card__body">
+              Upholstery buttons in fabric-covered and self-covered styles, decorative nail studs in brass and nickel finishes, and tufting buttons with pull-through cord. Standard sizes and custom mold options.
+            </p>
+            <a href="contact.html?subject=Buttons+Studs" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal" id="thread" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">13</span>
+            </div>
+            <h3 class="cat-card__title">Thread &amp; Needles</h3>
+            <p class="cat-card__body">
+              Industrial sewing thread in polyester, cotton-wrapped polyester, and bonded nylon. Cone sizes for industrial machines. Upholstery needles, curved needles, and mattress needles in full size ranges.
+            </p>
+            <a href="contact.html?subject=Thread+Needles" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="labels" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">14</span>
+            </div>
+            <h3 class="cat-card__title">Labels &amp; Marking</h3>
+            <p class="cat-card__body">
+              Care labels, brand labels, and regulatory compliance labels. Woven and printed options. Blank swing tags and barcode labels. Custom print runs available on minimum order quantities.
+            </p>
+            <a href="contact.html?subject=Labels+Marking" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="packaging" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">15</span>
+            </div>
+            <h3 class="cat-card__title">Packaging &amp; Protection</h3>
+            <p class="cat-card__body">
+              Corner protectors, edge guards, stretch film, polythene bags, corrugated sheet, and strapping. All protective packaging formats needed for finished furniture dispatch — single-piece to full-pallet quantities.
+            </p>
+            <a href="contact.html?subject=Packaging" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="cat-card reveal" id="adhesives" data-group="finishing">
+            <div class="cat-card__top">
+              <span class="cat-card__num">16</span>
+            </div>
+            <h3 class="cat-card__title">Adhesives &amp; Chemicals</h3>
+            <p class="cat-card__body">
+              Contact adhesives, hot melt glue sticks, spray adhesives, and fabric glue for upholstery bonding. Water-based and solvent-based formulations. Fabric protector sprays and leather conditioners.
+            </p>
+            <a href="contact.html?subject=Adhesives" class="cat-card__enquire">
+              Enquire <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ───────────────────────────────────────── -->
+    <section class="cta-section" aria-labelledby="trading-cta-heading">
+      <div class="container">
+        <div>
+          <h2 id="trading-cta-heading">Need something not listed?</h2>
+          <p>Our purchasing team sources materials on request. If you need a material or specification we don't currently stock, we can find it.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn--light btn--lg">
+            Talk to purchasing <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div>
+          <div class="site-footer__brand-name">TAD Logistics</div>
+          <div class="site-footer__brand-sub">Trading · Assembling · Distribution</div>
+          <p class="site-footer__brand-desc">Supplying Estonia's soft furniture industry since 2005.</p>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Navigate</div>
+          <ul class="site-footer__links">
+            <li><a href="trading.html" class="site-footer__link">Trading</a></li>
+            <li><a href="production.html" class="site-footer__link">Production</a></li>
+            <li><a href="contact.html" class="site-footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Locations</div>
+          <p class="site-footer__contact-item">Rummu, Estonia</p>
+          <p class="site-footer__contact-item">Virumaa</p>
+          <p class="site-footer__contact-item">Viljandi</p>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Contact</div>
+          <p class="site-footer__contact-item"><a href="mailto:info@tadlogistics.ee">info@tadlogistics.ee</a></p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="site-footer__copy">&copy; 2025 TAD Logistics OÜ. All rights reserved.</span>
+        <span class="site-footer__est">Est. 2005</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const catCards = document.querySelectorAll('.cat-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        catCards.forEach(card => {
+          if (filter === 'all' || card.dataset.group === filter) {
+            card.removeAttribute('data-hidden');
+          } else {
+            card.setAttribute('data-hidden', 'true');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
