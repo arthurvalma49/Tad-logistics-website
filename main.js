@@ -84,6 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
+          if (entry.target.classList.contains('cat-card')) {
+            const numEl = entry.target.querySelector('.cat-card__num');
+            if (numEl) animateCatNum(numEl);
+          }
           observer.unobserve(entry.target);
         }
       });
@@ -93,6 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealEls.forEach(el => observer.observe(el));
+  }
+
+  function animateCatNum(el) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const target = parseInt(el.textContent, 10);
+    if (isNaN(target)) return;
+    const start = performance.now();
+    const duration = 600;
+    function tick(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = String(Math.round(eased * target)).padStart(2, '0');
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
   }
 
   /* ─── Contact form ───────────────────────────────────── */
@@ -112,6 +131,41 @@ document.addEventListener('DOMContentLoaded', () => {
         form.style.display = 'none';
         if (successEl) successEl.classList.add('is-visible');
       }, 900);
+    });
+  }
+
+  /* ─── Hero cursor depth ─────────────────────────────── */
+  const heroEl = document.querySelector('.hero');
+  const heroHeadline = document.querySelector('.hero__headline');
+
+  if (heroEl && heroHeadline && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let tx = 0, ty = 0, cx = 0, cy = 0, rafId = null;
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function depthTick() {
+      cx = lerp(cx, tx, 0.08);
+      cy = lerp(cy, ty, 0.08);
+      heroHeadline.style.transform = `translate(${cx.toFixed(2)}px, ${cy.toFixed(2)}px)`;
+      if (Math.abs(cx - tx) < 0.02 && Math.abs(cy - ty) < 0.02) {
+        cx = tx; cy = ty;
+        heroHeadline.style.transform = (tx === 0 && ty === 0) ? '' : `translate(${tx}px, ${ty}px)`;
+        rafId = null;
+      } else {
+        rafId = requestAnimationFrame(depthTick);
+      }
+    }
+
+    heroEl.addEventListener('mouseenter', () => { heroHeadline.style.willChange = 'transform'; });
+    heroEl.addEventListener('mouseleave', () => {
+      tx = 0; ty = 0;
+      if (!rafId) rafId = requestAnimationFrame(depthTick);
+    });
+    heroEl.addEventListener('mousemove', (e) => {
+      const r = heroEl.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - 0.5) * -5;
+      ty = ((e.clientY - r.top) / r.height - 0.5) * -3.5;
+      if (!rafId) rafId = requestAnimationFrame(depthTick);
     });
   }
 

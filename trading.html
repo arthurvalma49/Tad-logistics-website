@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trading — TAD Logistics</title>
+  <title>Trading | TAD Logistics</title>
   <meta name="description" content="Browse TAD Logistics' 17 product categories for bed and soft furniture manufacturing. PP Spunbond, Polyester Fiber, Latex, Cotton Fabric, Motors, Duck Feathers and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,12 @@
     .trading-filter {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
+      gap: 0;
+      background: var(--bg-alt);
+      border-radius: 10px;
+      padding: 4px;
+      width: max-content;
+      position: relative;
     }
 
     .filter-btn {
@@ -24,19 +27,23 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 0.4em 1em;
-      border-radius: 6px;
-      border: 1.5px solid var(--border);
+      padding: 0.45em 1em;
+      border-radius: 7px;
+      border: none;
       color: var(--ink-3);
-      background: var(--white);
-      transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+      background: transparent;
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+      transition: color var(--dur-fast);
     }
 
-    .filter-btn.is-active,
-    .filter-btn:hover {
-      background: var(--sage-whisper);
-      border-color: var(--border-sage);
+    .filter-btn.is-active {
       color: var(--sage-dark);
+    }
+
+    .filter-btn:hover:not(.is-active) {
+      color: var(--ink-2);
     }
 
     .cat-card[data-hidden="true"] {
@@ -55,7 +62,7 @@
       </a>
 
       <nav class="site-nav__links" role="navigation" aria-label="Main navigation">
-        <div class="site-nav__item" style="position: relative;">
+        <div class="site-nav__item">
           <a href="trading.html" class="site-nav__link site-nav__link--has-dropdown is-active" aria-haspopup="true">
             Trading
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -139,7 +146,7 @@
       <div class="container">
         <p class="label label--light">17 product categories</p>
         <h1 id="trading-heading">Everything your production needs.</h1>
-        <p>From PP spunbond and cotton fabrics to latex, motors, and steel wire — the complete range of materials for bed and soft furniture manufacturing.</p>
+        <p>From PP spunbond and cotton fabrics to latex, motors, and steel wire: the complete range of materials for bed and soft furniture manufacturing.</p>
       </div>
     </section>
 
@@ -152,239 +159,136 @@
         </div>
 
         <!-- Filter -->
-        <div class="trading-filter" role="group" aria-label="Filter categories">
-          <button class="filter-btn is-active" data-filter="all">All categories</button>
-          <button class="filter-btn" data-filter="fabrics">Fabrics &amp; Covers</button>
-          <button class="filter-btn" data-filter="filling">Filling &amp; Foam</button>
-          <button class="filter-btn" data-filter="hardware">Hardware &amp; Parts</button>
-          <button class="filter-btn" data-filter="packaging">Packaging &amp; Accessories</button>
+        <div class="trading-filter-wrap">
+          <div class="trading-filter" role="group" aria-label="Filter categories">
+            <div class="filter-indicator" aria-hidden="true"></div>
+            <button class="filter-btn is-active" data-filter="all">All categories</button>
+            <button class="filter-btn" data-filter="fabrics">Fabrics &amp; Covers</button>
+            <button class="filter-btn" data-filter="filling">Filling &amp; Foam</button>
+            <button class="filter-btn" data-filter="hardware">Hardware &amp; Parts</button>
+            <button class="filter-btn" data-filter="packaging">Packaging &amp; Accessories</button>
+          </div>
         </div>
 
         <div class="cat-full-grid" id="catalogue-grid">
 
-          <!-- Fabrics & Covers -->
           <article class="cat-card reveal" id="pp-spunbond" data-group="fabrics">
-            <div class="cat-card__top">
-              <span class="cat-card__num">01</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">01</span></div>
             <h3 class="cat-card__title">PP Spunbond</h3>
-            <p class="cat-card__body">
-              Nonwoven polypropylene fabric used as backing cloth, insulator layer, and dust cover in mattresses, divan bases, and bed frames. Available in multiple gramme weights from lightweight lining to reinforcement grades.
-            </p>
-            <a href="contact.html?subject=PP+Spunbond" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Nonwoven polypropylene fabric used as backing cloth, insulator layer, and dust cover in mattresses, divan bases, and bed frames. Available in multiple gramme weights from lightweight lining to reinforcement grades.</p>
+            <a href="contact.html?subject=PP+Spunbond" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
-          <article class="cat-card reveal reveal--delay-1" id="cotton-fabric" data-group="fabrics">
-            <div class="cat-card__top">
-              <span class="cat-card__num">04</span>
-            </div>
-            <h3 class="cat-card__title">Cotton Fabric</h3>
-            <p class="cat-card__body">
-              Natural woven cotton for mattress ticking, pillow covers, and quilted bed covers. Available in plain weave, jacquard, and printed constructions. Breathable natural fibre suited to premium bed products.
-            </p>
-            <a href="contact.html?subject=Cotton+Fabric" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal reveal--delay-2" id="leather" data-group="fabrics">
-            <div class="cat-card__top">
-              <span class="cat-card__num">10</span>
-            </div>
-            <h3 class="cat-card__title">Leather</h3>
-            <p class="cat-card__body">
-              Genuine and PU synthetic leather for bed headboards, side rails, and decorative panels. Full range of surface finishes and colours. Supplied in rolls or cut to panel dimensions to your specification.
-            </p>
-            <a href="contact.html?subject=Leather" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal" id="fibertex" data-group="fabrics">
-            <div class="cat-card__top">
-              <span class="cat-card__num">14</span>
-            </div>
-            <h3 class="cat-card__title">Fibertex</h3>
-            <p class="cat-card__body">
-              Technical nonwoven fabric for mattress insulator pads, dust covers, and protective lining in bed base construction. Superior load distribution compared to standard PP spunbond; suited to high-specification mattresses.
-            </p>
-            <a href="contact.html?subject=Fibertex" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Filling & Foam -->
           <article class="cat-card reveal reveal--delay-1" id="polyester-fiber" data-group="filling">
-            <div class="cat-card__top">
-              <span class="cat-card__num">02</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">02</span></div>
             <h3 class="cat-card__title">Polyester Fiber</h3>
-            <p class="cat-card__body">
-              Loose and batted polyester filling for pillows, cushion inserts, and mattress comfort layers. Available siliconized and non-siliconized, in various denier counts and gram weights for different firmness profiles.
-            </p>
-            <a href="contact.html?subject=Polyester+Fiber" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Loose and batted polyester filling for pillows, cushion inserts, and mattress comfort layers. Available siliconized and non-siliconized, in various denier counts and gram weights for different firmness profiles.</p>
+            <a href="contact.html?subject=Polyester+Fiber" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
-          <article class="cat-card reveal reveal--delay-2" id="latex" data-group="filling">
-            <div class="cat-card__top">
-              <span class="cat-card__num">05</span>
-            </div>
-            <h3 class="cat-card__title">Latex</h3>
-            <p class="cat-card__body">
-              Natural and synthetic latex foam for mattress cores, toppers, and pillow inserts. Multiple ILD ratings available for varying comfort profiles from soft to extra firm. Dunlop and Talalay processing grades.
-            </p>
-            <a href="contact.html?subject=Latex" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal" id="polyester-wadding" data-group="filling">
-            <div class="cat-card__top">
-              <span class="cat-card__num">06</span>
-            </div>
-            <h3 class="cat-card__title">Polyester Wadding</h3>
-            <p class="cat-card__body">
-              Roll and cut wadding for quilted mattress covers, pillow shells, and top mattress comfort layers. Various gram weights; supplied with or without thermal bonding treatment for quilt stitch retention.
-            </p>
-            <a href="contact.html?subject=Polyester+Wadding" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal reveal--delay-1" id="duck-feathers" data-group="filling">
-            <div class="cat-card__top">
-              <span class="cat-card__num">12</span>
-            </div>
-            <h3 class="cat-card__title">Duck Feathers</h3>
-            <p class="cat-card__body">
-              Down and feather blend filling for premium pillows, comforters, and luxury mattress toppers. Cleaned and processed, supplied by fill weight. Various down-to-feather ratios for softness and loft requirements.
-            </p>
-            <a href="contact.html?subject=Duck+Feathers" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal reveal--delay-2" id="laminated-foam" data-group="filling">
-            <div class="cat-card__top">
-              <span class="cat-card__num">15</span>
-            </div>
-            <h3 class="cat-card__title">Laminated Foam</h3>
-            <p class="cat-card__body">
-              Pre-laminated foam composite panels for headboards, quilted cover inserts, and comfort layers requiring pre-bonded foam-and-fabric construction. Custom foam grades and cover fabric combinations available on order.
-            </p>
-            <a href="contact.html?subject=Laminated+Foam" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Hardware & Parts -->
-          <article class="cat-card reveal" id="motors" data-group="hardware">
-            <div class="cat-card__top">
-              <span class="cat-card__num">03</span>
-            </div>
+          <article class="cat-card reveal reveal--delay-2" id="motors" data-group="hardware">
+            <div class="cat-card__top"><span class="cat-card__num">03</span></div>
             <h3 class="cat-card__title">Motors &amp; Remote Controls</h3>
-            <p class="cat-card__body">
-              Electric adjustment motors, lifting columns, and wired/wireless remote control systems for motorised and adjustable beds. Compatible with standard bed frame profiles. Single and dual motor configurations available.
-            </p>
-            <a href="contact.html?subject=Motors+Remote+Controls" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Electric adjustment motors, lifting columns, and wired/wireless remote control systems for motorised and adjustable beds. Compatible with standard bed frame profiles. Single and dual motor configurations available.</p>
+            <a href="contact.html?subject=Motors+Remote+Controls" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal" id="cotton-fabric" data-group="fabrics">
+            <div class="cat-card__top"><span class="cat-card__num">04</span></div>
+            <h3 class="cat-card__title">Cotton Fabric</h3>
+            <p class="cat-card__body">Natural woven cotton for mattress ticking, pillow covers, and quilted bed covers. Available in plain weave, jacquard, and printed constructions. Breathable natural fibre suited to premium bed products.</p>
+            <a href="contact.html?subject=Cotton+Fabric" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="latex" data-group="filling">
+            <div class="cat-card__top"><span class="cat-card__num">05</span></div>
+            <h3 class="cat-card__title">Latex</h3>
+            <p class="cat-card__body">Natural and synthetic latex foam for mattress cores, toppers, and pillow inserts. Multiple ILD ratings available for varying comfort profiles from soft to extra firm. Dunlop and Talalay processing grades.</p>
+            <a href="contact.html?subject=Latex" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="polyester-wadding" data-group="filling">
+            <div class="cat-card__top"><span class="cat-card__num">06</span></div>
+            <h3 class="cat-card__title">Polyester Wadding</h3>
+            <p class="cat-card__body">Roll and cut wadding for quilted mattress covers, pillow shells, and top mattress comfort layers. Various gram weights; supplied with or without thermal bonding treatment for quilt stitch retention.</p>
+            <a href="contact.html?subject=Polyester+Wadding" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal" id="zippers" data-group="packaging">
+            <div class="cat-card__top"><span class="cat-card__num">07</span></div>
+            <h3 class="cat-card__title">Zippers &amp; Sliders</h3>
+            <p class="cat-card__body">Nylon and metal zippers for mattress covers, pillow covers, and removable bed components. Supplied as continuous chain cut to length, or as pre-cut lengths complete with sliders. Self-locking slider options available.</p>
+            <a href="contact.html?subject=Zippers+Sliders" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
           <article class="cat-card reveal reveal--delay-1" id="metal-connectors" data-group="hardware">
-            <div class="cat-card__top">
-              <span class="cat-card__num">08</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">08</span></div>
             <h3 class="cat-card__title">Metal Connectors</h3>
-            <p class="cat-card__body">
-              Joining brackets, corner plates, slat holders, and frame connectors for bed construction. Available in multiple steel gauges and surface finishes for box spring, slatted base, and continental bed frame assembly.
-            </p>
-            <a href="contact.html?subject=Metal+Connectors" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Joining brackets, corner plates, slat holders, and frame connectors for bed construction. Available in multiple steel gauges and surface finishes for box spring, slatted base, and continental bed frame assembly.</p>
+            <a href="contact.html?subject=Metal+Connectors" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
           <article class="cat-card reveal reveal--delay-2" id="steel-wire" data-group="hardware">
-            <div class="cat-card__top">
-              <span class="cat-card__num">09</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">09</span></div>
             <h3 class="cat-card__title">Steel Wire</h3>
-            <p class="cat-card__body">
-              Bonnell and pocket coil spring units, perimeter border wire, and straightened steel wire for mattress core construction. Consistent gauge and temper for reliable long-term spring performance.
-            </p>
-            <a href="contact.html?subject=Steel+Wire" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Bonnell and pocket coil spring units, perimeter border wire, and straightened steel wire for mattress core construction. Consistent gauge and temper for reliable long-term spring performance.</p>
+            <a href="contact.html?subject=Steel+Wire" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal" id="leather" data-group="fabrics">
+            <div class="cat-card__top"><span class="cat-card__num">10</span></div>
+            <h3 class="cat-card__title">Leather</h3>
+            <p class="cat-card__body">Genuine and PU synthetic leather for bed headboards, side rails, and decorative panels. Full range of surface finishes and colours. Supplied in rolls or cut to panel dimensions to your specification.</p>
+            <a href="contact.html?subject=Leather" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="cardboard-rolls" data-group="packaging">
+            <div class="cat-card__top"><span class="cat-card__num">11</span></div>
+            <h3 class="cat-card__title">Cardboard Rolls</h3>
+            <p class="cat-card__body">Perimeter edge rolls and reinforcement board for mattress side stiffening and box spring frame construction. Multiple thicknesses and widths. Kraft and recycled board grades to match specification requirements.</p>
+            <a href="contact.html?subject=Cardboard+Rolls" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="duck-feathers" data-group="filling">
+            <div class="cat-card__top"><span class="cat-card__num">12</span></div>
+            <h3 class="cat-card__title">Duck Feathers</h3>
+            <p class="cat-card__body">Down and feather blend filling for premium pillows, comforters, and luxury mattress toppers. Cleaned and processed, supplied by fill weight. Various down-to-feather ratios for softness and loft requirements.</p>
+            <a href="contact.html?subject=Duck+Feathers" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
           <article class="cat-card reveal" id="legs" data-group="hardware">
-            <div class="cat-card__top">
-              <span class="cat-card__num">13</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">13</span></div>
             <h3 class="cat-card__title">Legs</h3>
-            <p class="cat-card__body">
-              Wooden and metal legs for divan bases, platform beds, and bed frames. Standard and custom heights. Natural wood, lacquered, and powder-coated metal options. Matching levelling glides and floor caps available.
-            </p>
-            <a href="contact.html?subject=Legs" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Wooden and metal legs for divan bases, platform beds, and bed frames. Standard and custom heights. Natural wood, lacquered, and powder-coated metal options. Matching levelling glides and floor caps available.</p>
+            <a href="contact.html?subject=Legs" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-1" id="fibertex" data-group="fabrics">
+            <div class="cat-card__top"><span class="cat-card__num">14</span></div>
+            <h3 class="cat-card__title">Fibertex</h3>
+            <p class="cat-card__body">Technical nonwoven fabric for mattress insulator pads, dust covers, and protective lining in bed base construction. Superior load distribution compared to standard PP spunbond; suited to high-specification mattresses.</p>
+            <a href="contact.html?subject=Fibertex" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal reveal--delay-2" id="laminated-foam" data-group="filling">
+            <div class="cat-card__top"><span class="cat-card__num">15</span></div>
+            <h3 class="cat-card__title">Laminated Foam</h3>
+            <p class="cat-card__body">Pre-laminated foam composite panels for headboards, quilted cover inserts, and comfort layers requiring pre-bonded foam-and-fabric construction. Custom foam grades and cover fabric combinations available on order.</p>
+            <a href="contact.html?subject=Laminated+Foam" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="cat-card reveal" id="foil-rolls" data-group="packaging">
+            <div class="cat-card__top"><span class="cat-card__num">16</span></div>
+            <h3 class="cat-card__title">Polyethylene Foil Rolls</h3>
+            <p class="cat-card__body">PE film rolls for mattress and pillow packaging, moisture protection during transit, and wrapping of finished bed components. Available in standard roll widths and film gauges for manual and machine application.</p>
+            <a href="contact.html?subject=PE+Foil+Rolls" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
           <article class="cat-card reveal reveal--delay-1" id="plastic-washers" data-group="hardware">
-            <div class="cat-card__top">
-              <span class="cat-card__num">17</span>
-            </div>
+            <div class="cat-card__top"><span class="cat-card__num">17</span></div>
             <h3 class="cat-card__title">Plastic Washers</h3>
-            <p class="cat-card__body">
-              Nylon and plastic washers, leg cups, and floor glides for bed frame assembly. Prevents floor damage and reduces movement. Supplied in standard packs to match common leg diameters and profiles.
-            </p>
-            <a href="contact.html?subject=Plastic+Washers" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Packaging & Accessories -->
-          <article class="cat-card reveal reveal--delay-2" id="zippers" data-group="packaging">
-            <div class="cat-card__top">
-              <span class="cat-card__num">07</span>
-            </div>
-            <h3 class="cat-card__title">Zippers &amp; Sliders</h3>
-            <p class="cat-card__body">
-              Nylon and metal zippers for mattress covers, pillow covers, and removable bed components. Supplied as continuous chain cut to length, or as pre-cut lengths complete with sliders. Self-locking slider options available.
-            </p>
-            <a href="contact.html?subject=Zippers+Sliders" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal" id="cardboard-rolls" data-group="packaging">
-            <div class="cat-card__top">
-              <span class="cat-card__num">11</span>
-            </div>
-            <h3 class="cat-card__title">Cardboard Rolls</h3>
-            <p class="cat-card__body">
-              Perimeter edge rolls and reinforcement board for mattress side stiffening and box spring frame construction. Multiple thicknesses and widths. Kraft and recycled board grades to match specification requirements.
-            </p>
-            <a href="contact.html?subject=Cardboard+Rolls" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="cat-card reveal reveal--delay-1" id="foil-rolls" data-group="packaging">
-            <div class="cat-card__top">
-              <span class="cat-card__num">16</span>
-            </div>
-            <h3 class="cat-card__title">Polyethylene Foil Rolls</h3>
-            <p class="cat-card__body">
-              PE film rolls for mattress and pillow packaging, moisture protection during transit, and wrapping of finished bed components. Available in standard roll widths and film gauges for manual and machine application.
-            </p>
-            <a href="contact.html?subject=PE+Foil+Rolls" class="cat-card__enquire">
-              Enquire <span aria-hidden="true">→</span>
-            </a>
+            <p class="cat-card__body">Nylon and plastic washers, leg cups, and floor glides for bed frame assembly. Prevents floor damage and reduces movement. Supplied in standard packs to match common leg diameters and profiles.</p>
+            <a href="contact.html?subject=Plastic+Washers" class="cat-card__enquire">Enquire <span aria-hidden="true">→</span></a>
           </article>
 
         </div>
@@ -457,20 +361,45 @@
   <script src="main.js"></script>
   <script>
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const catCards = document.querySelectorAll('.cat-card');
+    const catCards   = document.querySelectorAll('.cat-card');
+    const indicator  = document.querySelector('.filter-indicator');
+
+    function moveIndicator(btn) {
+      if (!indicator) return;
+      indicator.style.left  = btn.offsetLeft + 'px';
+      indicator.style.width = btn.offsetWidth + 'px';
+    }
+
+    // Set initial position without transition
+    const activeBtn = document.querySelector('.filter-btn.is-active');
+    if (activeBtn && indicator) {
+      indicator.style.transition = 'none';
+      moveIndicator(activeBtn);
+      requestAnimationFrame(() => { indicator.style.transition = ''; });
+    }
+
+    function applyFilter(filter) {
+      catCards.forEach(card => {
+        if (filter === 'all' || card.dataset.group === filter) {
+          card.removeAttribute('data-hidden');
+        } else {
+          card.setAttribute('data-hidden', 'true');
+        }
+      });
+    }
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
         filterBtns.forEach(b => b.classList.remove('is-active'));
         btn.classList.add('is-active');
-        catCards.forEach(card => {
-          if (filter === 'all' || card.dataset.group === filter) {
-            card.removeAttribute('data-hidden');
-          } else {
-            card.setAttribute('data-hidden', 'true');
-          }
-        });
+        moveIndicator(btn);
+
+        const doFilter = () => applyFilter(btn.dataset.filter);
+        if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.startViewTransition(doFilter);
+        } else {
+          doFilter();
+        }
       });
     });
   </script>

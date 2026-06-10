@@ -789,14 +789,14 @@ p { max-width: 65ch; }
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--border);
+  color: var(--ink-3);
   transition: color var(--dur-mid);
   text-transform: uppercase;
   cursor: default;
 }
 
 .partner-name:hover {
-  color: var(--ink-3);
+  color: var(--sage);
 }
 
 /* ─── CTA section ────────────────────────────────────────── */
@@ -1508,5 +1508,157 @@ p { max-width: 65ch; }
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ─── View Transitions ──────────────────────────────────── */
+@view-transition {
+  navigation: auto;
+}
+
+.site-nav {
+  view-transition-name: site-nav;
+}
+
+@keyframes vt-out {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes vt-in {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+::view-transition-old(root) {
+  animation: 220ms var(--ease-out) vt-out;
+}
+
+::view-transition-new(root) {
+  animation: 360ms var(--ease-out) vt-in;
+}
+
+::view-transition-old(site-nav),
+::view-transition-new(site-nav) {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ─── Filter segmented control ──────────────────────────── */
+.trading-filter-wrap {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.trading-filter-wrap::-webkit-scrollbar { display: none; }
+
+.filter-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 7px;
+  background: var(--white);
+  box-shadow: 0 1px 4px oklch(0% 0 0 / 0.1), 0 1px 2px oklch(0% 0 0 / 0.06);
+  pointer-events: none;
+  transition: left 0.28s cubic-bezier(0.25, 0, 0, 1), width 0.28s cubic-bezier(0.25, 0, 0, 1);
+}
+
+/* ─── Hero entrance animations ──────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__eyebrow::before {
+    transform-origin: left center;
+    animation: bar-grow 0.5s var(--ease-out) 0.05s both;
+  }
+
+  @keyframes bar-grow {
+    from { transform: scaleX(0); }
+  }
+
+  .hero__eyebrow {
+    animation: fade-up-sm 0.6s var(--ease-out) 0.05s both;
+  }
+
+  .hero__headline {
+    animation: headline-reveal 1s var(--ease-out) 0.15s both;
+  }
+
+  @keyframes headline-reveal {
+    from { clip-path: inset(0 0 100% 0); }
+    to   { clip-path: inset(0 0 0% 0); }
+  }
+
+  .hero__body {
+    animation: fade-up-sm 0.7s var(--ease-out) 0.48s both;
+  }
+
+  .hero__actions {
+    animation: fade-up-sm 0.7s var(--ease-out) 0.58s both;
+  }
+
+  .hero__image {
+    animation: fade-in 1s ease 0.2s both;
+  }
+
+  @keyframes fade-up-sm {
+    from { opacity: 0; transform: translateY(16px); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+  }
+}
+
+/* ─── Partner marquee ────────────────────────────────────── */
+.partners__track-wrap {
+  overflow: hidden;
+  margin-top: var(--sp-12);
+}
+
+.partners__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .partners__track {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ─── Scroll-driven page-hero parallax ───────────────────── */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .page-hero .container {
+      animation: hero-parallax linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0px 420px;
+    }
+
+    @keyframes hero-parallax {
+      to { transform: translateY(-28px); }
+    }
+
+    .page-hero::before {
+      animation: hero-glow linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0px 600px;
+    }
+
+    @keyframes hero-glow {
+      to { transform: scale(1.6) translate(8%, 4%); }
+    }
   }
 }
