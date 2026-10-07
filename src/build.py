@@ -202,14 +202,21 @@ def products(lang):
     cards = []
     for pid, g, img, t in PRODUCTS:
         name, specs = t[lang]
-        lis = ''.join(f'<li>{esc(x)}</li>' for x in specs)
+        # "Weight: 14–120 g/m²" becomes a label/value row; lines without a label span the full row
+        def row(x):
+            if ': ' in x:
+                k, v = x.split(': ', 1)
+                v = v[:1].upper() + v[1:]
+                return f'<li><span class="spec__k">{esc(k)}</span><span class="spec__v">{esc(v)}</span></li>'
+            return f'<li class="spec--plain"><span class="spec__v">{esc(x)}</span></li>'
+        lis = ''.join(row(x) for x in specs)
         ask = f'{url(lang, "contact")}?subject={quote(name)}#inquiry'
         cards.append(f'''        <article class="product" id="{pid}" data-group="{g}">
           <div class="product__img"><img src="/assets/img/{img}.webp" alt="{esc(name)}" loading="lazy"></div>
           <div class="product__body">
             <p class="product__group">{esc(groups[g])}</p>
             <h2>{esc(name)}</h2>
-            <ul>{lis}</ul>
+            <ul class="specs">{lis}</ul>
             <a class="product__ask" href="{esc(ask)}">{s["ask"]}<span class="sr-only">: {esc(name)}</span> <span aria-hidden="true">→</span></a>
           </div>
         </article>''')

@@ -51,25 +51,26 @@
 
   <section class="contact">
     <div class="wrap">
-      <div class="contact__grid">
+      <div class="contact__grid" data-copied="Copied" data-copy-failed="Could not copy">
         <div class="card">
           <p class="role">Sales</p>
           <h2>Taavi Tavaste</h2>
-          <a href="tel:+37253400308">+372 5340 0308</a>
-          <a href="mailto:taavi@tadlogistics.ee">taavi@tadlogistics.ee</a>
+          <span class="copyable"><a href="tel:+37253400308">+372 5340 0308</a><button type="button" class="copy-btn" data-copy="+372 5340 0308" aria-label="Copy phone number: +372 5340 0308"></button></span>
+          <span class="copyable"><a href="mailto:taavi@tadlogistics.ee">taavi@tadlogistics.ee</a><button type="button" class="copy-btn" data-copy="taavi@tadlogistics.ee" aria-label="Copy email address: taavi@tadlogistics.ee"></button></span>
         </div>
         <div class="card">
           <p class="role">Purchasing</p>
           <h2>Tanel Kimalane</h2>
-          <a href="tel:+37256985363">+372 5698 5363</a>
-          <a href="mailto:tanel@tadlogistics.ee">tanel@tadlogistics.ee</a>
+          <span class="copyable"><a href="tel:+37256985363">+372 5698 5363</a><button type="button" class="copy-btn" data-copy="+372 5698 5363" aria-label="Copy phone number: +372 5698 5363"></button></span>
+          <span class="copyable"><a href="mailto:tanel@tadlogistics.ee">tanel@tadlogistics.ee</a><button type="button" class="copy-btn" data-copy="tanel@tadlogistics.ee" aria-label="Copy email address: tanel@tadlogistics.ee"></button></span>
         </div>
         <div class="card">
           <p class="role">General</p>
           <h2>TAD Logistics OÜ</h2>
-          <a href="mailto:info@tadlogistics.ee">info@tadlogistics.ee</a>
+          <span class="copyable"><a href="mailto:info@tadlogistics.ee">info@tadlogistics.ee</a><button type="button" class="copy-btn" data-copy="info@tadlogistics.ee" aria-label="Copy email address: info@tadlogistics.ee"></button></span>
         </div>
       </div>
+      <p class="copy-toast" role="status" aria-live="polite"></p>
 
       <form class="inquiry" id="inquiry" novalidate aria-labelledby="inquiry-title">
         <h2 id="inquiry-title">Send an inquiry</h2>

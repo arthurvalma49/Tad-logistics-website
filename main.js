@@ -70,20 +70,22 @@ if (hero) {
   const bars = hero.querySelector('.hero__bars');
   const pauseBtn = hero.querySelector('.pause');
   const DELAY = 6000;
-  let i = 0, timer, paused = reducedMotion, hovering = false;
+  let i = 0, timer, paused = reducedMotion;
 
   bars.innerHTML = slides.map((_, n) => `<button type="button" aria-label="${bars.dataset.label} ${n + 1} / ${slides.length}"></button>`).join('');
   const dots = [...bars.children];
 
   function schedule() {
     clearTimeout(timer);
-    if (!paused && !hovering) timer = setTimeout(() => show(i + 1), DELAY);
+    hero.classList.toggle('is-stopped', paused);
+    if (!paused) timer = setTimeout(() => show(i + 1), DELAY);
   }
   function show(n) {
     slides[i].classList.remove('is-active');
     dots[i].removeAttribute('aria-current');
     i = (n + slides.length) % slides.length;
     slides[i].classList.add('is-active');
+    void dots[i].offsetWidth; // restart the bar fill animation
     dots[i].setAttribute('aria-current', 'true');
     schedule();
   }
@@ -91,13 +93,11 @@ if (hero) {
   hero.querySelector('.hero__next').addEventListener('click', () => show(i + 1));
   dots.forEach((d, n) => d.addEventListener('click', () => show(n)));
   setPaused(pauseBtn, paused);
-  pauseBtn.addEventListener('click', () => { paused = !paused; setPaused(pauseBtn, paused); schedule(); });
-
-  // Stop while the pointer or keyboard focus is in the hero
-  hero.addEventListener('mouseenter', () => { hovering = true; schedule(); });
-  hero.addEventListener('mouseleave', () => { hovering = false; schedule(); });
-  hero.addEventListener('focusin', () => { hovering = true; schedule(); });
-  hero.addEventListener('focusout', (e) => { if (!hero.contains(e.relatedTarget)) { hovering = false; schedule(); } });
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    setPaused(pauseBtn, paused);
+    if (paused) schedule(); else show(i); // resuming gives the current photo a full turn again
+  });
 
   // Swipe on touch screens
   let startX = null;
@@ -213,6 +213,27 @@ document.querySelectorAll('.map').forEach((map) => {
     frame.focus();
   });
 });
+
+// Copy buttons next to phone numbers and emails (contact)
+const copyGrid = document.querySelector('.contact__grid');
+if (copyGrid) {
+  const buttons = copyGrid.querySelectorAll('.copy-btn');
+  if (!navigator.clipboard) buttons.forEach((b) => { b.hidden = true; });
+  const toast = document.querySelector('.copy-toast');
+  let hideTimer;
+  buttons.forEach((b) => b.addEventListener('click', async () => {
+    let ok = true;
+    try { await navigator.clipboard.writeText(b.dataset.copy); } catch (e) { ok = false; }
+    toast.textContent = ok ? `${copyGrid.dataset.copied}: ${b.dataset.copy}` : copyGrid.dataset.copyFailed;
+    toast.classList.add('is-visible');
+    buttons.forEach((x) => x.classList.toggle('is-done', ok && x === b));
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      toast.classList.remove('is-visible');
+      buttons.forEach((x) => x.classList.remove('is-done'));
+    }, 2000);
+  }));
+}
 
 // Product group filter, kept in the URL (?group=hardware)
 const filters = document.querySelector('.filters');
