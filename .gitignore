@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local tooling
+.playwright-mcp/
+.superpowers/
+__pycache__/

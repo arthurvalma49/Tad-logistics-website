@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tadlogistics.ee/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/trading.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/trading.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/tooted.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/production.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/production.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/tootmine.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/contact.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/privacy.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/privaatsus.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/et/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/et/tooted.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/trading.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/tooted.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/et/tootmine.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/production.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/tootmine.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/et/kontakt.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://tadlogistics.ee/et/privaatsus.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tadlogistics.ee/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="et" href="https://tadlogistics.ee/et/privaatsus.html"/>
+  </url>
+</urlset>

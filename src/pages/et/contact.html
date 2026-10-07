@@ -1,0 +1,102 @@
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">Kontakt</p>
+      <h1>Võta ühendust</h1>
+      <p>Müügi-, ostu- ja üldkontaktid, aadressid ja transporditingimused.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="contact__grid">
+        <div class="card">
+          <p class="role">Müük</p>
+          <h2>Taavi Tavaste</h2>
+          <a href="tel:+37253400308">+372 5340 0308</a>
+          <a href="mailto:taavi@tadlogistics.ee">taavi@tadlogistics.ee</a>
+        </div>
+        <div class="card">
+          <p class="role">Ost</p>
+          <h2>Tanel Kimalane</h2>
+          <a href="tel:+37256985363">+372 5698 5363</a>
+          <a href="mailto:tanel@tadlogistics.ee">tanel@tadlogistics.ee</a>
+        </div>
+        <div class="card">
+          <p class="role">Üldine</p>
+          <h2>TAD Logistics OÜ</h2>
+          <a href="mailto:info@tadlogistics.ee">info@tadlogistics.ee</a>
+        </div>
+      </div>
+
+      <form class="inquiry" id="inquiry" novalidate aria-labelledby="inquiry-title">
+        <h2 id="inquiry-title">Saada päring</h2>
+        <p class="inquiry__note"><span aria-hidden="true">*</span>-ga tähistatud väljad on kohustuslikud.</p>
+        <div class="inquiry__grid">
+          <div class="field">
+            <label for="name">Nimi <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" data-missing="Sisesta oma nimi.">
+            <p class="field__error" id="name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">E-post <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" data-missing="Sisesta oma e-posti aadress." data-invalid="Sisesta korrektne e-posti aadress, nt nimi@ettevote.ee.">
+            <p class="field__error" id="email-error" hidden></p>
+          </div>
+          <div class="field full combo">
+            <label for="subject">Teema</label>
+            <div class="combo__box">
+              <input type="text" id="subject" name="subject" placeholder="Vali või kirjuta ise" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="subject-list" aria-autocomplete="none">
+              <button type="button" class="combo__toggle" tabindex="-1" aria-label="Näita teemasid"></button>
+              <ul class="combo__list" id="subject-list" role="listbox" aria-label="Teemad" hidden>
+                <li role="option" id="subject-opt-0" aria-selected="false">Tooted</li>
+                <li role="option" id="subject-opt-1" aria-selected="false">Tootmine</li>
+                <li role="option" id="subject-opt-2" aria-selected="false">Transport</li>
+              </ul>
+            </div>
+          </div>
+          <div class="field full">
+            <label for="message">Sõnum <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error" data-missing="Sisesta oma sõnum."></textarea>
+            <p class="field__error" id="message-error" hidden></p>
+          </div>
+        </div>
+        <!-- reCAPTCHA tuleb siia, kui taustasüsteem on olemas (vt inglise versiooni kommentaari). -->
+        <div class="inquiry__foot">
+          <button class="btn btn--green" type="submit">Saada päring</button>
+          <p class="inquiry__privacy">Saatmine avab sinu e-posti programmi. Vaata ka <a href="{{privacy}}">privaatsusteadet</a>.</p>
+        </div>
+      </form>
+
+      <div class="transport-note" id="transport">
+        <h2 class="label">Transport</h2>
+        <p>Transport Harjumaa piires tasuta, teistesse piirkondadesse kokkuleppel.</p>
+      </div>
+
+      <div class="locations">
+        <div class="location">
+          <div class="map" data-src="https://www.google.com/maps?q=Haapsalu+mnt+12A,+Rummu,+76102+Estonia&amp;output=embed&amp;hl=et" data-title="Kaart: Rummu tootmis- ja logistikakeskus">
+            <p>Kaardi pakub Google Maps. Kaardi kuvamisel saadetakse andmeid Google'ile.</p>
+            <button type="button" class="btn btn--white">Näita kaarti</button>
+          </div>
+          <div class="location__info">
+            <p class="label">Tootmis- ja logistikakeskus</p>
+            <h2>Rummu</h2>
+            <p>Haapsalu mnt 12A, Rummu, Vasalemma vald, 76102 Harjumaa</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Haapsalu+mnt+12A,+Rummu,+76102+Estonia" target="_blank" rel="noopener">Ava Google Mapsis<span class="sr-only"> (avaneb uues aknas)</span> <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="location">
+          <div class="map" data-src="https://www.google.com/maps?q=Graniidi+tee+19,+Assaku,+75310+Estonia&amp;output=embed&amp;hl=et" data-title="Kaart: Assaku kontor">
+            <p>Kaardi pakub Google Maps. Kaardi kuvamisel saadetakse andmeid Google'ile.</p>
+            <button type="button" class="btn btn--white">Näita kaarti</button>
+          </div>
+          <div class="location__info">
+            <p class="label">Kontor</p>
+            <h2>Assaku</h2>
+            <p>Graniidi tee 19, 75310 Assaku</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Graniidi+tee+19,+Assaku,+75310+Estonia" target="_blank" rel="noopener">Ava Google Mapsis<span class="sr-only"> (avaneb uues aknas)</span> <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -29,14 +29,16 @@ brand
 - Taavi Tavaste — Sales
 - Tanel Kimalane — Purchasing
 
-## Partners / Brands Stocked
-Kung, Hil, Hästen, Bellus, Wendre
+## Partners
+Kungsängen, Hilding Baltic, Hästens, Bellus, Wendre
 
 ## Contact
 info@tadlogistics.ee | Language: Estonian + English
 
 ## Design Direction
-Direction C — Clean Scandinavian Catalogue. Approachable, organized, trustworthy. Easy to browse. Feels like a well-designed product catalogue.
+Minimal and factual. Logo green (#5f9a2e) on warm off-white, Hanken Grotesk, real TAD photos only.
+No marketing copy: every line of text must come from TAD's own material (current tadlogistics.ee) or verified facts.
+The site's job is to get buyers to products, production info or a contact as fast as possible.
 
 ## Strategic Principles
 - Clarity over cleverness

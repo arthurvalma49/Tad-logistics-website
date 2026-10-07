@@ -2,5 +2,1072 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "framework": null,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/kiudkangas",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/kiudkangas/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/fibertex",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#fibertex",
+      "permanent": true
+    },
+    {
+      "source": "/fibertex/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#fibertex",
+      "permanent": true
+    },
+    {
+      "source": "/sulekangas",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#down-proof-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/sulekangas/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#down-proof-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/nahk",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#leather",
+      "permanent": true
+    },
+    {
+      "source": "/nahk/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#leather",
+      "permanent": true
+    },
+    {
+      "source": "/poluester-kiud",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#polyester-fiber",
+      "permanent": true
+    },
+    {
+      "source": "/poluester-kiud/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#polyester-fiber",
+      "permanent": true
+    },
+    {
+      "source": "/mahuline-vatiin",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#polyester-wadding",
+      "permanent": true
+    },
+    {
+      "source": "/mahuline-vatiin/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#polyester-wadding",
+      "permanent": true
+    },
+    {
+      "source": "/latex",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#latex",
+      "permanent": true
+    },
+    {
+      "source": "/latex/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#latex",
+      "permanent": true
+    },
+    {
+      "source": "/lamineeritud-poroloon",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#laminated-foam",
+      "permanent": true
+    },
+    {
+      "source": "/lamineeritud-poroloon/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#laminated-foam",
+      "permanent": true
+    },
+    {
+      "source": "/pardisuled",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#duck-feathers",
+      "permanent": true
+    },
+    {
+      "source": "/pardisuled/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#duck-feathers",
+      "permanent": true
+    },
+    {
+      "source": "/mootorid-ja-puldid",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#motors",
+      "permanent": true
+    },
+    {
+      "source": "/mootorid-ja-puldid/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#motors",
+      "permanent": true
+    },
+    {
+      "source": "/metallist-kinnitused",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#metal-connectors",
+      "permanent": true
+    },
+    {
+      "source": "/metallist-kinnitused/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#metal-connectors",
+      "permanent": true
+    },
+    {
+      "source": "/terasest-traat",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#steel-wire",
+      "permanent": true
+    },
+    {
+      "source": "/terasest-traat/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#steel-wire",
+      "permanent": true
+    },
+    {
+      "source": "/jalad",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#legs",
+      "permanent": true
+    },
+    {
+      "source": "/jalad/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#legs",
+      "permanent": true
+    },
+    {
+      "source": "/plastikust-seibid",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#plastic-washers",
+      "permanent": true
+    },
+    {
+      "source": "/plastikust-seibid/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#plastic-washers",
+      "permanent": true
+    },
+    {
+      "source": "/meetrilukud-ja-lukukelgud",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#zippers",
+      "permanent": true
+    },
+    {
+      "source": "/meetrilukud-ja-lukukelgud/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#zippers",
+      "permanent": true
+    },
+    {
+      "source": "/lainepapp",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#corrugated-cardboard",
+      "permanent": true
+    },
+    {
+      "source": "/lainepapp/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#corrugated-cardboard",
+      "permanent": true
+    },
+    {
+      "source": "/pehmenduskile",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#cushioning-film",
+      "permanent": true
+    },
+    {
+      "source": "/pehmenduskile/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#cushioning-film",
+      "permanent": true
+    },
+    {
+      "source": "/2016/07/15/kiudkangas",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/2016/07/15/kiudkangas/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/trading",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/trading/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/tooted",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/tooted/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/tootmine",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/tootmine/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/production",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/production/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/easarendusprojekt",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/#eas-arendusprojekt",
+      "permanent": true
+    },
+    {
+      "source": "/easarendusprojekt/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/#eas-arendusprojekt",
+      "permanent": true
+    },
+    {
+      "source": "/eas",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/#digidiagnostika",
+      "permanent": true
+    },
+    {
+      "source": "/eas/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/#digidiagnostika",
+      "permanent": true
+    },
+    {
+      "source": "/pood",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/pood/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/ostukorv",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/ostukorv/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/kassa",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/kassa/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/trading.html",
+      "permanent": true
+    },
+    {
+      "source": "/minu-konto",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/minu-konto/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/kiudkangas",
+      "destination": "/et/tooted.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/kiudkangas/",
+      "destination": "/et/tooted.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/fibertex",
+      "destination": "/et/tooted.html#fibertex",
+      "permanent": true
+    },
+    {
+      "source": "/fibertex/",
+      "destination": "/et/tooted.html#fibertex",
+      "permanent": true
+    },
+    {
+      "source": "/sulekangas",
+      "destination": "/et/tooted.html#down-proof-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/sulekangas/",
+      "destination": "/et/tooted.html#down-proof-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/nahk",
+      "destination": "/et/tooted.html#leather",
+      "permanent": true
+    },
+    {
+      "source": "/nahk/",
+      "destination": "/et/tooted.html#leather",
+      "permanent": true
+    },
+    {
+      "source": "/poluester-kiud",
+      "destination": "/et/tooted.html#polyester-fiber",
+      "permanent": true
+    },
+    {
+      "source": "/poluester-kiud/",
+      "destination": "/et/tooted.html#polyester-fiber",
+      "permanent": true
+    },
+    {
+      "source": "/mahuline-vatiin",
+      "destination": "/et/tooted.html#polyester-wadding",
+      "permanent": true
+    },
+    {
+      "source": "/mahuline-vatiin/",
+      "destination": "/et/tooted.html#polyester-wadding",
+      "permanent": true
+    },
+    {
+      "source": "/latex",
+      "destination": "/et/tooted.html#latex",
+      "permanent": true
+    },
+    {
+      "source": "/latex/",
+      "destination": "/et/tooted.html#latex",
+      "permanent": true
+    },
+    {
+      "source": "/lamineeritud-poroloon",
+      "destination": "/et/tooted.html#laminated-foam",
+      "permanent": true
+    },
+    {
+      "source": "/lamineeritud-poroloon/",
+      "destination": "/et/tooted.html#laminated-foam",
+      "permanent": true
+    },
+    {
+      "source": "/pardisuled",
+      "destination": "/et/tooted.html#duck-feathers",
+      "permanent": true
+    },
+    {
+      "source": "/pardisuled/",
+      "destination": "/et/tooted.html#duck-feathers",
+      "permanent": true
+    },
+    {
+      "source": "/mootorid-ja-puldid",
+      "destination": "/et/tooted.html#motors",
+      "permanent": true
+    },
+    {
+      "source": "/mootorid-ja-puldid/",
+      "destination": "/et/tooted.html#motors",
+      "permanent": true
+    },
+    {
+      "source": "/metallist-kinnitused",
+      "destination": "/et/tooted.html#metal-connectors",
+      "permanent": true
+    },
+    {
+      "source": "/metallist-kinnitused/",
+      "destination": "/et/tooted.html#metal-connectors",
+      "permanent": true
+    },
+    {
+      "source": "/terasest-traat",
+      "destination": "/et/tooted.html#steel-wire",
+      "permanent": true
+    },
+    {
+      "source": "/terasest-traat/",
+      "destination": "/et/tooted.html#steel-wire",
+      "permanent": true
+    },
+    {
+      "source": "/jalad",
+      "destination": "/et/tooted.html#legs",
+      "permanent": true
+    },
+    {
+      "source": "/jalad/",
+      "destination": "/et/tooted.html#legs",
+      "permanent": true
+    },
+    {
+      "source": "/plastikust-seibid",
+      "destination": "/et/tooted.html#plastic-washers",
+      "permanent": true
+    },
+    {
+      "source": "/plastikust-seibid/",
+      "destination": "/et/tooted.html#plastic-washers",
+      "permanent": true
+    },
+    {
+      "source": "/meetrilukud-ja-lukukelgud",
+      "destination": "/et/tooted.html#zippers",
+      "permanent": true
+    },
+    {
+      "source": "/meetrilukud-ja-lukukelgud/",
+      "destination": "/et/tooted.html#zippers",
+      "permanent": true
+    },
+    {
+      "source": "/lainepapp",
+      "destination": "/et/tooted.html#corrugated-cardboard",
+      "permanent": true
+    },
+    {
+      "source": "/lainepapp/",
+      "destination": "/et/tooted.html#corrugated-cardboard",
+      "permanent": true
+    },
+    {
+      "source": "/pehmenduskile",
+      "destination": "/et/tooted.html#cushioning-film",
+      "permanent": true
+    },
+    {
+      "source": "/pehmenduskile/",
+      "destination": "/et/tooted.html#cushioning-film",
+      "permanent": true
+    },
+    {
+      "source": "/2016/07/15/kiudkangas",
+      "destination": "/et/tooted.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/2016/07/15/kiudkangas/",
+      "destination": "/et/tooted.html#nonwoven-fabric",
+      "permanent": true
+    },
+    {
+      "source": "/trading",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/trading/",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/tooted",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/tooted/",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/tootmine",
+      "destination": "/et/tootmine.html",
+      "permanent": true
+    },
+    {
+      "source": "/tootmine/",
+      "destination": "/et/tootmine.html",
+      "permanent": true
+    },
+    {
+      "source": "/production",
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/production/",
+      "destination": "/production.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/et/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt/",
+      "destination": "/et/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/easarendusprojekt",
+      "destination": "/et/#eas-arendusprojekt",
+      "permanent": true
+    },
+    {
+      "source": "/easarendusprojekt/",
+      "destination": "/et/#eas-arendusprojekt",
+      "permanent": true
+    },
+    {
+      "source": "/eas",
+      "destination": "/et/#digidiagnostika",
+      "permanent": true
+    },
+    {
+      "source": "/eas/",
+      "destination": "/et/#digidiagnostika",
+      "permanent": true
+    },
+    {
+      "source": "/pood",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/pood/",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/ostukorv",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/ostukorv/",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/kassa",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/kassa/",
+      "destination": "/et/tooted.html",
+      "permanent": true
+    },
+    {
+      "source": "/minu-konto",
+      "destination": "/et/",
+      "permanent": true
+    },
+    {
+      "source": "/minu-konto/",
+      "destination": "/et/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        }
+      ]
+    },
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(img|partners|og)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
 }

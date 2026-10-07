@@ -1,16 +1,36 @@
-# React + Vite
+# TAD Logistics website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static site, plain HTML, CSS and JavaScript, deployed as-is on Vercel. English at `/`, Estonian at `/et/`.
 
-Currently, two official plugins are available:
+## Editing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The HTML pages are **generated**. Edit the sources in `src/`, then run:
 
-## React Compiler
+```
+python src/build.py
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Source | What it holds |
+|---|---|
+| `src/build.py` | Layout (head, header, footer), page titles/descriptions, sitemap generation |
+| `src/content.py` | UI strings for both languages, the 17 products with specs, partner logos |
+| `src/pages/en/*.html`, `src/pages/et/*.html` | Body of each page |
+| `src/pages/404.html` | Bilingual 404 page |
 
-## Expanding the ESLint configuration
+The build also adds `width`/`height` to every image automatically. Python 3.12+, no packages needed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Other files
+
+- `style.css`: all styles (fonts are self-hosted in `assets/fonts/`)
+- `main.js`: menu, hero carousel, partner strip, inquiry form, subject dropdown, click-to-load maps, product filter, photo lightbox
+- `vercel.json`: redirects from the old WordPress URLs, security headers, caching
+- `.vercelignore`: keeps `src/` and project notes out of the deployment
+- `assets/og/`: JPEG images used for link previews
+
+## Preview locally
+
+```
+python -m http.server 8000
+```
+
+then open http://localhost:8000. (Redirects and security headers only apply on Vercel.)

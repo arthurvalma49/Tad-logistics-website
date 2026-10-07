@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tadlogistics.ee/sitemap.xml
